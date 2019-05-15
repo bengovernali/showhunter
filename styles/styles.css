@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: black;
+    margin: 0
+    
+}
+
+* { color:#fff; text-decoration: none;}
+
+.Aligner {
+    text-align: center;
+    color:#fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3rem;
+    vertical-align: center;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+section {
+    width: 100%;
+    padding: 0 4%;
+    display: table;
+    margin: 0;
+    max-width: none;
+    background-color: black;
+    height: 100vh;
+
+    &:nth-of-type(2n) {
+        background-color: darkgray;
+    }
+}
+
+.First {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.searchbar {
+    width: 300px;
+    padding: 10px;
+    background-color: black;
+}
