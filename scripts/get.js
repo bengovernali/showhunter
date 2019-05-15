@@ -12,4 +12,4 @@ function get(url) {
         .catch(function(error) {
             return error;
         });
-}
+};
