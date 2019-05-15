@@ -1,20 +1,15 @@
 "use strict"
 
-let count = 0;
-
 function pullEvents(artistArray) {
     //loop through array of artists
     artistArray.forEach(function(artist) {
-        if (count < 10) {
-            //create unique url to fetch from ticketmaster
-            //fetch data from ticketmaster API for that specific artist
-            get(createUrl(artist))
-            .then((response) => {
-                console.log(response);
-                createEvent(response);
+        //create unique url to fetch from ticketmaster
+        //fetch data from ticketmaster API for that specific artist
+        get(createUrl(artist))
+        .then((response) => {
+            console.log(response);
+            createEvent(response);
         });
-        count += 1
-        }
     });
 };
 
@@ -32,4 +27,4 @@ function createEvent(item) {
 };
 
 //Test with single band
-pullEvents(['The Chromatics']);
+//pullEvents(['The Chromatics']);
