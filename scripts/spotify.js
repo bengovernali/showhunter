@@ -1,26 +1,33 @@
-"use strict"
+function getArtistId(artist) {
+    const URL = `http://localhost:3000/https://api.spotify.com/v1/search?q=${artist}&type=artist`;
+    const requestHeaders = {
+        method: 'GET'
+    };
 
+    const request = new Request(URL, requestHeaders);
 
-function getArtist() {
+    getSpotify(request)
+    .then(response => {
+        const artistId = response.artists.items[0].id;
+        return artistId;
+    })
+    .then(pullRelatedArtists)
     
-    get(createUrl(userArtist))
-    .then((response) => {
+}
 
-        console.log(response);
-        createArray(response);
+
+function pullRelatedArtists(id) {
+    console.log(`ARTIST ID:`, id);
+    const URL = `http://localhost:3000/https://api.spotify.com/v1/artists/${id}/related-artists`;
+    const requestHeaders = {
+        method: 'GET'
+    };
+
+    const request = new Request(URL, requestHeaders);
+
+getSpotify(request)
+    .then(response => {
     });
-};
-
-function generateUrl(item) {
-
-    let url = `https://api.spotify.com/v1/search?q=${item}&type=artist` 
-    return url;
-}
-
-function createArray(info) {
     
-    let artistArray = [];
-    info.forEach(artist) {
-
-    }
-}
+};
+getArtistId('coldplay');
