@@ -23,7 +23,9 @@ function createUrl(item) {
 function createEvent(item) {
     //create div element for event and embed in DOM
     let name = item._embedded.events[0].name;
-    //let date = item._embedded.events
+    let venue = item._embedded.events[0]._embedded.venues[0].name;
+    let date = item._embedded.events[0].dates.start.localDate;
+    let time = item.embedded.events[0].dates.start.localTime;
 };
 
 //Test with single band
