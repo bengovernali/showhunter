@@ -1,14 +1,43 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
+
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
         <title>Show Hunter</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/Animations/search.css">
     </head>
+
     <body>
-        <script src="./scripts/getSpotify.js"></script>
-        <script src="./scripts/get.js"></script>
-        <script src="./scripts/main.js"></script>
-        <script src="./scripts/spotify.js"></script>
+
+    
+
+    <body background="background.jpg">
+        <section class="First">
+            <div></div>
+            <div class="Aligner">
+                <h1>ShowHunter</h1>
+                <form class="Search">
+                <div class="container">
+                    <input type="text" placeholder="Search...">
+                    <div class="search"></div>
+                </div>
+            </div>
+        </section>
+        <section class="Second">
+            <div class="Card">
+                <img src="" alt="">
+                <div class="wrapper">
+                    <h4></h4>
+                    <ul id= "eventList"></ul>
+                </div>
+            </div>
+        </section>
+        <script src='scripts/get.js'></script>
+        <script src='scripts/getSpotify.js'></script>
+        <script src='scripts/spotify.js'></script>
+        <script src='scripts/ticketmaster.js'></script>
+        <script src='scripts/main.js'></script>
+
     </body>
+
 </html>
