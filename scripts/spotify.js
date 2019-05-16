@@ -12,12 +12,9 @@ function getArtistId(artist) {
         return artistId;
     })
     .then(pullRelatedArtists)
-    
 }
 
-
 function pullRelatedArtists(id) {
-    console.log(`ARTIST ID:`, id);
     const URL = `http://localhost:3000/https://api.spotify.com/v1/artists/${id}/related-artists`;
     const requestHeaders = {
         method: 'GET'
@@ -25,9 +22,18 @@ function pullRelatedArtists(id) {
 
     const request = new Request(URL, requestHeaders);
 
-getSpotify(request)
+    getSpotify(request)
     .then(response => {
-    });
-    
+        const relatedArray = response.artists;
+        return relatedArray;
+    })
+    .then(genRelatedArtistsArray)
 };
-getArtistId('coldplay');
+
+function genRelatedArtistsArray(item) {
+    let artistsArray = [];
+    item.forEach(function(artist) {
+        artistsArray.push(artist.name);
+    });
+    return artistsArray;
+};
