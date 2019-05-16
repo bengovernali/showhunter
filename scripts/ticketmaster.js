@@ -7,7 +7,6 @@ function pullEvents(artistArray) {
         //fetch data from ticketmaster API for that specific artist
         get(createUrl(artist))
         .then((response) => {
-            console.log(response);
             createEvent(response);
         });
     });
