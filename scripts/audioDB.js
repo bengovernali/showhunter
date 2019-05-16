@@ -1,10 +1,25 @@
 "use strict"
 
 
-fetch('https://theaudiodb.com/api/v1/json/1/search.php?s=coldplay')
-    .then(response => response.json())
-    .then(data => {
-
-        console.log(data)
+function getArtist() {
+    
+    get(createUrl(userArtist))
+    .then((response) => {
+        console.log(response);
+        createArray(response);
     });
+};
 
+function generateUrl(item) {
+
+    let url = `theaudiodb.com/api/v1/json/195003/search.php?s=${item}`
+    return url;
+}
+
+function createArray() {
+    
+}
+
+function getGenre() {
+    
+}
