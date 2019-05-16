@@ -2,6 +2,7 @@
 
 function pullEvents(artistArray) {
     //loop through array of artists
+    console.log(artistArray);
     artistArray.forEach(function(artist) {
         //create unique url to fetch from ticketmaster
         //fetch data from ticketmaster API for that specific artist
@@ -52,6 +53,3 @@ function createEvent(item) {
     timeElement.textContent = `${newTime}`;
     event.append(timeElement); 
 };
-
-//Test with single band
-pullEvents(['Animals as Leaders', 'clams casino']);

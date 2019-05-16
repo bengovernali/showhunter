@@ -12,6 +12,9 @@ function getArtistId(artist) {
         return artistId;
     })
     .then(pullRelatedArtists)
+    .then(genRelatedArtistsArray)
+    .then(pullEvents)
+    .then(createEvent)
 }
 
 function pullRelatedArtists(id) {
@@ -27,7 +30,7 @@ function pullRelatedArtists(id) {
         const relatedArray = response.artists;
         return relatedArray;
     })
-    .then(genRelatedArtistsArray)
+    //.then(genRelatedArtistsArray)
 };
 
 function genRelatedArtistsArray(item) {
@@ -35,5 +38,7 @@ function genRelatedArtistsArray(item) {
     item.forEach(function(artist) {
         artistsArray.push(artist.name);
     });
+    //console.log(artistsArray);
     return artistsArray;
 };
+
