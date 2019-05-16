@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+* { color:#fff; text-decoration: none;}
+
+.Aligner {
+    text-align: center;
+    color:#fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3rem;
+    vertical-align: center;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    margin-top: -30%;
+}
+
+
+
+section {
+    width: 100%;
+    padding: 0 4%;
+    display: table;
+    margin: 0;
+    max-width: none;
+    height: 100vh;
+    
+    
+}
+
+.First {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+}
+
+.Second {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(3,3,3);
+    height: 100vh;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.searchbar {
+    width: 425px;
+    padding: 10px;
+    background-color: black;
+    border-radius: 20px;
+    margin-top: 5px;
+    border-color: #fff;
+    opacity: 0.25;
+}
