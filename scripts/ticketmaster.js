@@ -24,8 +24,34 @@ function createEvent(item) {
     let name = item._embedded.events[0].name;
     let venue = item._embedded.events[0]._embedded.venues[0].name;
     let date = item._embedded.events[0].dates.start.localDate;
-    let time = item.embedded.events[0].dates.start.localTime;
+    let startTime = item._embedded.events[0].dates.start.localTime;
+
+    let time = startTime.split(':');
+    let hours = Number(time[0]);
+    let minutes = Number(time[1]);
+    let amPm = 'AM';
+    
+    let newTime = formatTime(hours, minutes);
+
+    let newDate = formatDate(date);
+
+    let eventContainer = document.getElementById('eventList');
+    let event = document.createElement('li');
+    event.textContent = `${name}`;
+    eventContainer.append(event);
+    
+    let venueElement = document.createElement('p');
+    venueElement.textContent = `Venue: ${venue}`;
+    event.append(venueElement);
+    
+    let dateElement = document.createElement('p');
+    dateElement.textContent = `${newDate}`;
+    event.append(dateElement);
+
+    let timeElement = document.createElement('p');
+    timeElement.textContent = `${newTime}`;
+    event.append(timeElement); 
 };
 
 //Test with single band
-//pullEvents(['The Chromatics']);
+pullEvents(['Animals as Leaders', 'clams casino']);
