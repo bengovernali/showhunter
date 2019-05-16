@@ -7,9 +7,9 @@ html {
 }
 
 body {
-    background-color: black;
-    margin: 0
-    
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 * { color:#fff; text-decoration: none;}
@@ -28,6 +28,7 @@ h1 {
     justify-content: center;
     margin: 0;
     padding: 0;
+    margin-top: -30%;
 }
 
 
@@ -38,18 +39,25 @@ section {
     display: table;
     margin: 0;
     max-width: none;
-    background-color: black;
     height: 100vh;
-
-    &:nth-of-type(2n) {
-        background-color: darkgray;
-    }
+    
+    
 }
 
 .First {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+    
+}
+
+.Second {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(3,3,3);
+    height: 100vh;
 }
 
 .search{
@@ -58,10 +66,15 @@ section {
     justify-content: center;
     margin: 0;
     padding: 0;
+    
 }
 
 .searchbar {
-    width: 300px;
+    width: 425px;
     padding: 10px;
     background-color: black;
+    border-radius: 20px;
+    margin-top: 5px;
+    border-color: #fff;
+    opacity: 0.25;
 }
