@@ -2,15 +2,19 @@
 
 function pullEvents(artistArray) {
     //loop through array of artists
-    const interval = 5000;
+    const interval = 250;
+    let promise = Promise.resolve();
     artistArray.forEach(function(artist, index) {
         //create unique url to fetch from ticketmaster
         //fetch data from ticketmaster API for that specific artist
-        setTimeout(function() {
+        promise = promise.then(function() {
             get(createUrl(artist))
             .then((response) => {
                 createEvent(response);
-            }), index * interval;
+            })
+            return new Promise(function(resolve) {
+                setTimeout(resolve, interval);
+            });
         });
     });
 };
