@@ -19,11 +19,6 @@ body {
     /* background-size: cover; */
 }
 
-
-
-/* 
-* { color:#fff; text-decoration: none;} */
-
 .Aligner {
     text-align: center;
     /* color:#fff; */
@@ -41,8 +36,6 @@ h1 {
     padding: 0;
     margin-top: -30%;
 }
-
-
 
 section {
     width: 100%;
@@ -68,9 +61,8 @@ section {
     align-items: center;
     justify-content: center;
     background-color: rgb(10, 10, 10);
-    height: 100vh;
+    position: relative;
 }
-
 
 .Search{
     display: flex;
@@ -78,7 +70,6 @@ section {
     justify-content: center;
     margin: 0;
     padding: 0;
-    
 }
 
 .searchbar {
@@ -91,14 +82,14 @@ section {
     opacity: 0.25;
 }
 
-
-
 .eventContainer{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;
+    position: absolute;
+    top: 10px;
 }
 
 .card {
@@ -112,7 +103,9 @@ section {
     width: 280px;
 }
 
-
+img {
+    width: 260px;
+}
 
 @media screen and (min-width: 641px){
 
@@ -127,5 +120,3 @@ section {
         background-size: 125%;
     }
 } 
-
-
