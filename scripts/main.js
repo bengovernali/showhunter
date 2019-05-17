@@ -15,7 +15,9 @@ function executeSearch(e) {
         eventContainer.removeChild(child);
     }
     let userArtist = userInput.value;
-
+    document.querySelector('#scroll').scrollIntoView({
+        behavior: 'smooth'
+    });
     getArtistId(userArtist);
 };
 
