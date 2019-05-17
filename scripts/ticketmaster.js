@@ -2,12 +2,19 @@
 
 function pullEvents(artistArray) {
     //loop through array of artists
-    artistArray.forEach(function(artist) {
+    const interval = 250;
+    let promise = Promise.resolve();
+    artistArray.forEach(function(artist, index) {
         //create unique url to fetch from ticketmaster
         //fetch data from ticketmaster API for that specific artist
-        get(createUrl(artist))
-        .then((response) => {
-            createEvent(response);
+        promise = promise.then(function() {
+            get(createUrl(artist))
+            .then((response) => {
+                createEvent(response);
+            })
+            return new Promise(function(resolve) {
+                setTimeout(resolve, interval);
+            });
         });
     });
 };
@@ -52,6 +59,3 @@ function createEvent(item) {
     timeElement.textContent = `${newTime}`;
     event.append(timeElement); 
 };
-
-//Test with single band
-pullEvents(['Animals as Leaders', 'clams casino']);

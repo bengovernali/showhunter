@@ -25,15 +25,15 @@ function pullRelatedArtists(id) {
     getSpotify(request)
     .then(response => {
         const relatedArray = response.artists;
-        return relatedArray;
+        console.log(relatedArray);
+        //return relatedArray;
+        let artistsArray = [];
+        relatedArray.forEach(function(artist) {
+            artistsArray.push(artist.name);
+        });
+        console.log(artistsArray);
+        return artistsArray;
     })
-    .then(genRelatedArtistsArray)
+    .then(pullEvents)
 };
 
-function genRelatedArtistsArray(item) {
-    let artistsArray = [];
-    item.forEach(function(artist) {
-        artistsArray.push(artist.name);
-    });
-    return artistsArray;
-};
