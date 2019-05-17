@@ -2,20 +2,15 @@
 
 function pullEvents(artistArray) {
     //loop through array of artists
-<<<<<<< HEAD
     const interval = 5000;
     artistArray.forEach(function(artist, index) {
-=======
-    console.log(artistArray);
-    artistArray.forEach(function(artist) {
->>>>>>> ab2dffded0dcfc8978f715c62655620f68678454
         //create unique url to fetch from ticketmaster
         //fetch data from ticketmaster API for that specific artist
         setTimeout(function() {
             get(createUrl(artist))
             .then((response) => {
                 createEvent(response);
-            }), index * interval
+            }), index * interval;
         });
     });
 };
