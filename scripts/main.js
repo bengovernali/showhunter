@@ -14,7 +14,10 @@ function executeSearch(e) {
     while (child) {
         eventContainer.removeChild(child);
         child = eventContainer.lastElementChild
-    }
+        let loadingBar = document.querySelector('.loading');
+        loadingBar.classList.add('loading-hide');
+    } 
+
     let userArtist = userInput.value;
     document.querySelector('#scroll').scrollIntoView({
         behavior: 'smooth'
