@@ -4,25 +4,35 @@
 
 html {
     font-size: 16px;
+    background-color: rgb(19, 19, 19);
 }
 
 body {
     margin: 0;
+    background-image: url(../background.jpg);
+    background-position: center; 
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 350%;
+    background-position-x: 25%;
+    height: 100vh;
+    /* background-size: cover; */
 }
 
-* { color:#fff; text-decoration: none;}
+
+
+/* 
+* { color:#fff; text-decoration: none;} */
 
 .Aligner {
     text-align: center;
-    color:#fff;
+    /* color:#fff; */
     font-family: 'Courier New', Courier, monospace;
     font-size: 3rem;
     vertical-align: center;
 }
 
 h1 {
+    color:#fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,7 +70,7 @@ section {
     height: 100vh;
 }
 
-/*
+
 .Search{
     display: flex;
     align-items: center;
@@ -79,4 +89,21 @@ section {
     border-color: #fff;
     opacity: 0.25;
 }
-*/
+
+
+
+@media screen and (min-width: 641px){
+
+    body {
+        background-size: 175%;
+        background-position-x: 10%; 
+    }
+}
+
+@media screen and (min-width: 821px){
+    body {
+        background-size: 125%;
+    }
+} 
+
+
