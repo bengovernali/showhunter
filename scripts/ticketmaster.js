@@ -68,4 +68,7 @@ function createEvent(item) {
     let timeElement = document.createElement('p');
     timeElement.textContent = `${newTime}`;
     event.append(timeElement); 
+
+    let loadingBar = document.querySelector('.loading');
+    loadingBar.classList.add('loading-hide')
 };

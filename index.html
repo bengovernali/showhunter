@@ -4,6 +4,7 @@
         <title>Show Hunter</title>
         <link rel="stylesheet" href="styles/styles.css">
         <link rel="stylesheet" href="styles/Animations/search.css">
+        <link rel="stylesheet" href="styles/Animations/loading.css">
     </head>
     <body>
         <section class="First">
@@ -18,6 +19,13 @@
             </div>
         </section>
         <section id ="scroll" class="Second">
+            <div class ="loading-hide"></div>
+            <div class ="loading">
+                <div class ="loading-bar"></div>
+                <div class ="loading-bar"></div>
+                <div class ="loading-bar"></div>
+                <div class ="loading-bar"></div>
+            </div>
             <div id= "eventList" class="eventContainer"></div>
         </section>
         <script src='scripts/get.js'></script>
