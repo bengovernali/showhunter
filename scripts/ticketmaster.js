@@ -43,9 +43,13 @@ function createEvent(item) {
     let newDate = formatDate(date);
 
     let eventContainer = document.getElementById('eventList');
-    let event = document.createElement('li');
-    event.textContent = `${name}`;
+    let event = document.createElement('div');
+    event.className = "card";
     eventContainer.append(event);
+
+    let nameElement = document.createElement('h3');
+    nameElement.textContent = `${name}`;
+    event.append(nameElement);
     
     let venueElement = document.createElement('p');
     venueElement.textContent = `Venue: ${venue}`;

@@ -13,6 +13,7 @@ function executeSearch(e) {
     let child = eventContainer.lastElementChild;
     while (child) {
         eventContainer.removeChild(child);
+        child = eventContainer.lastElementChild
     }
     let userArtist = userInput.value;
     document.querySelector('#scroll').scrollIntoView({
