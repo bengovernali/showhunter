@@ -14,7 +14,7 @@ html {
 }
 
 img[src="logo2.png"]{
-    width: 25rem;
+    width: 20rem;
 }
 
 body {
@@ -124,7 +124,7 @@ img {
         background-position-x: 10%; 
     }
     .logo{
-        margin-top: -65%;
+        margin-top: -60%;
     }
     
     img[src="logo2.png"]{
@@ -137,11 +137,11 @@ img {
         background-size: 125%;
     }
     .logo{
-        margin-top: -60%;
+        margin-top: -55%;
     }
     
     img[src="logo2.png"]{
-        width: 40rem;
+        width: 35rem;
     }
 } 
 
