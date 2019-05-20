@@ -6,6 +6,15 @@ html {
     font-size: 16px;
     background-color: rgb(19, 19, 19);
     color: #fff;
+    font-family: 'Inconsolata', monospace;
+}
+
+.logo{
+    margin-top: -75%;
+}
+
+img[src="logo2.png"]{
+    width: 25rem;
 }
 
 body {
@@ -26,6 +35,7 @@ body {
     font-size: 3rem;
     vertical-align: center;
 }
+
 
 h1 {
     color:#fff;
@@ -113,10 +123,26 @@ img {
         background-size: 175%;
         background-position-x: 10%; 
     }
+    .logo{
+        margin-top: -65%;
+    }
+    
+    img[src="logo2.png"]{
+        width: 30rem;
+    }
 }
 
 @media screen and (min-width: 821px){
     body {
         background-size: 125%;
     }
+    .logo{
+        margin-top: -60%;
+    }
+    
+    img[src="logo2.png"]{
+        width: 40rem;
+    }
 } 
+
+
