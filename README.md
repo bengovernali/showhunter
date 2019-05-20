@@ -1,10 +1,13 @@
 # ShowHunter
 
 
-###Description
+## Description
+
 ShowHunter is a web application that takes a band name as user input and provides the user with a series of nearby concerts for related artists. In its current state, ShowHunter only searches for events in the Atlanta GA area. 
 
-###How It Works
+---
+
+## How It Works
 
 A user will click on the magnifying glass at the center of the page and enter a band name into the search area. The site will automatically scroll to the bottom of the page where a loading icon can be seen. ShowHunter will first search through the Spotify API to find the band's unique Spotify ID. Using this ID, it will then search for the band's related artists also in the Spotify API. This will return an array of 20 related artists along with all of their info. ShowHunter then places only the artist names in a separate array.
 
@@ -12,21 +15,26 @@ With this array of related artists, ShowHunter then searches the Ticketmaster AP
 
 Event cards include an image of the band/venue, the band name, the venue name, the date, and the time of the show.
 
-###Behind the Scenes
+---
+
+## Behind the Scenes
 
 Spotify API requires a server to access. In order to bypass this issue (as this was intended as a front-end only project) all Spotify requests are done using a remote proxy server. In addition to this, oauth authentification is necessary. As of right now, oauth tokens are manually entered into the code as they expire. A feature will be added to automatically handle this.
 
-###Screenshots
+---
 
-!(Images/showhunter-home.jpg)
-ShowHunter homepage
+## Screenshots
 
-!(Images/showhunter-search-sample.jpg)
+![ShowHunter homepage](Images/showhunter-home.jpg)
+Show Hunter homepage
+
+
+![Sample Search](./Images/showhunter-search-sample.jpg)
 Sample search
 
-!(Images/showhunter-logo.png)
+![Loading icon](./Images/showhunter-logo.png)
 Loading icon
 
-!(Images/showhunter-results.jpg)
+![Sample Results](./Images/showhunter-results.jpg)
 Sample results
 
