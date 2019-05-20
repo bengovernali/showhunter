@@ -3,10 +3,11 @@
 .container {
     position: absolute;
     margin: auto;
-    top: 0;
+    top: 5%;
     left: 0;
     right: 0;
     bottom: 0;
+    max-height: 50%;
 }
 .container .search {
     position: absolute;
@@ -15,8 +16,8 @@
     right: 0;
     bottom: 0;
     left: 0;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     background: black;
     border-radius: 50%;
     transition: all 1s;
